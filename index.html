@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navigation Drawer</title>
+    <style media="screen">
+    *{
+      margin: 0;
+    }
+    html,body,main{
+      width: 100%;
+      height: 100%;
+      /* overflow: hidden; /*for removing the scroll bar*/ */
+    }
+    main{
+      width: 60%;
+      margin: 0 auto;
+      padding-top: 10%;
+      box-sizing: border-box;
+    }
+
+    .drawer{
+        background: #1b356d;
+        color: white;
+        width: 300px;
+        height: 100%;
+        padding: 48px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-300px,0px);  /*translate:  x -300px, y 0px  */
+        transition: transform 0.3s ease;
+
+      }
+      .drawerOpen{
+        transform: translate(0,0);
+        transition: transform 0.3s ease;
+      }
+
+      #drawerIcon{
+        width: 48px;
+        height: 48px;
+        padding-left: 20px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="drawerIcon" src="hamburger.svg" alt="Drawer icon">
+
+    <nav class="drawer ">
+      <h2>Navigation Drawer</h2>
+      <h3>Drawer Content</h3>
+      <h3>Drawer Content</h3>
+      <h3>Drawer Content</h3>
+      <h3>Drawer Content</h3>
+      <h3>Drawer Content</h3>
+    </nav>
+    <main>
+      <h1>Main Content</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </main>
+
+
+
+    <script type="text/javascript">
+      const DRAWER_ICON = document.querySelector("#drawerIcon");
+      const MAIN_CONTENT = document.querySelector("main");
+      const DRAWER = document.querySelector(".drawer");
+
+      DRAWER_ICON.addEventListener('click',toggleDrawer);
+
+      MAIN_CONTENT.addEventListener('click',closeDrawer);
+
+
+      function toggleDrawer() {
+        DRAWER.classList.toggle('drawerOpen');
+      }
+      function closeDrawer(){
+        DRAWER.classList.remove('drawerOpen');
+      }
+    </script>
+  </body>
+</html>
